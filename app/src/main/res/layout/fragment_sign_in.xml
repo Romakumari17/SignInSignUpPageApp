@@ -43,7 +43,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_below="@id/inputEmail"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="10dp"
@@ -58,35 +58,49 @@
             android:layout_marginHorizontal="10dp"
             android:hint="Password"
             android:textSize="20dp"
-            android:inputType="textWebPassword" />
+            android:id="@+id/btneye"
+            android:inputType="textWebPassword"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/eye"
+            android:layout_gravity="right"
+            android:layout_marginBottom="20dp"
+
+            />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Remember Me and Forget Password Links -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_below="@id/inputPassword"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center_vertical"
-        android:layout_margin="10dp">
+        android:orientation="horizontal">
 
         <CheckBox
             android:id="@+id/cbremember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remember Me"
-            android:textColor="#AA57D1"
             android:layout_marginHorizontal="20dp"
-            android:alpha=".7" />
+            android:textSize="15dp"
+            android:text="Remember Me"
+            android:textColor="#0E27B5" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forget Password?"
             android:id="@+id/passwordforget"
-            android:textColor="#E10D0D"
-            android:alpha="0.7"
-            android:layout_marginLeft="60dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:gravity="end"
+            android:text="Forget Password?"
+            android:textColor="#680404" />
     </LinearLayout>
 
     <!-- Sign In Button -->
@@ -148,7 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="google"
-            app:icon="@drawable/ic_google"
+            app:icon="@drawable/google"
             android:layout_margin="10dp"
             android:textColor="@color/black"
             android:backgroundTint="#304FFE" />
@@ -156,12 +170,17 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:icon="@drawable/ic_facebook"
+            app:icon="@drawable/facebook"
             android:text="facebook"
             android:backgroundTint="#304FFE"
             android:textColor="@color/black"
             android:layout_margin="10dp" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        />
     <View
         android:layout_width="match_parent"
         android:layout_height="80dp"
