@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/singUpfFagment">
+
+
+    <fragment
+        android:id="@+id/singUpfFagment"
+        android:name="com.romakumari.signinsignuppageapp.SingUpfFagment"
+        android:label="fragment_sing_upf_fagment"
+        tools:layout="@layout/fragment_sing_up_fagment" >
+        <action
+            android:id="@+id/action_singUpfFagment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.romakumari.signinsignuppageapp.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+</navigation>

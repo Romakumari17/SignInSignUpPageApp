@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignInFragment">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"
+        android:textColor="#0B219C"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Email Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:hint="Email"
+            android:textSize="20dp"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputEmail"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:hint="Password"
+            android:textSize="20dp"
+            android:inputType="textWebPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Remember Me and Forget Password Links -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/inputPassword"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp">
+
+        <CheckBox
+            android:id="@+id/cbremember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"
+            android:textColor="#AA57D1"
+            android:layout_marginHorizontal="20dp"
+            android:alpha=".7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget Password?"
+            android:id="@+id/passwordforget"
+            android:textColor="#E10D0D"
+            android:alpha="0.7"
+            android:layout_marginLeft="60dp"/>
+    </LinearLayout>
+
+    <!-- Sign In Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/inputPassword"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#2962FF"
+        android:gravity="center_horizontal"
+        android:text="Sign In"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:cornerRadius="15dp" />
+
+    <!-- Or Sign Up With Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/signInButton"
+        android:layout_margin="10dp">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or sign up with"
+            android:textSize="20dp"
+            android:paddingHorizontal="10dp" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="@color/black" />
+    </LinearLayout>
+
+    <!-- Social Media Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/signInButton"
+        android:layout_margin="25dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="google"
+            app:icon="@drawable/ic_google"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:backgroundTint="#304FFE" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_facebook"
+            android:text="facebook"
+            android:backgroundTint="#304FFE"
+            android:textColor="@color/black"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/backcolorlayout"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+
+</RelativeLayout>
